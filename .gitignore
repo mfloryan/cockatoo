@@ -1,0 +1,16 @@
+# Visual Studio left-overs
+*.suo
+*.ncb
+*.user
+*.ccscc
+*.cache
+
+# Compiled files
+*/bin/
+*/obj/
+*/Obj/
+
+_ReSharper*/
+
+# Windows left-overs
+Thumbs.db
