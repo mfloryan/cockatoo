@@ -43,7 +43,15 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Http\HttpHeaderTests.cs" />
+    <Compile Include="Http\QueryParameterComparerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mmSquare.Cockatoo\mmSquare.Cockatoo.csproj">
+      <Project>{68DCAB0B-6FC3-41D0-8BE7-606C314A4239}</Project>
+      <Name>mmSquare.Cockatoo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
