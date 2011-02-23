@@ -11,6 +11,7 @@
 */Obj/
 
 _ReSharper*/
+*.dotCover
 
 # Windows left-overs
 Thumbs.db
