@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-
-namespace mmSquare.Cockatoo.Http
+﻿namespace mmSquare.Cockatoo.Http
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Globalization;
+
     public class HttpHeader
     {
         
@@ -34,7 +34,7 @@ namespace mmSquare.Cockatoo.Http
 
         public string Value
         {
-            get { return string.Join(", ", values); }
+            get { return string.Join(", ", values.ToArray()); }
         }
 
         public override string ToString()
