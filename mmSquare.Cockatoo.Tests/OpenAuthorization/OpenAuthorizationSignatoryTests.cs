@@ -1,13 +1,12 @@
-﻿using mmSquare.Cockatoo.OpenAuthorization;
-
-namespace mmSquare.Cockatoo.Tests.OAuth
+﻿namespace mmSquare.Cockatoo.Tests.OpenAuthorization
 {
     using System.Linq;
     using Cockatoo.Http;
     using NUnit.Framework;
+    using Cockatoo.OpenAuthorization;
 
     [TestFixture]
-    public class OAuthSigningTests
+    public class OpenAuthorizationSignatoryTests
     {
 
         [Test]
@@ -33,7 +32,7 @@ namespace mmSquare.Cockatoo.Tests.OAuth
 
             var signature = new OpenAuthorizationSignatory(authDetails);
 
-            var signedRequest = signature.Sign(httpRequest);
+            var signedRequest = signature.Sign(httpRequest, nonce, timestamp);
 
             var header = signedRequest.Headers.First(h => h.Field == HttpHeader.KnownHeaders.Authorization);
             
