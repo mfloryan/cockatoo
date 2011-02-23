@@ -1,19 +1,23 @@
 ﻿namespace mmSquare.Cockatoo.Http
 {
     using System;
-    using System.Collections.Generic;
 
     public class HttpRequestDetails
     {
-        private List<HttpHeader> headers = new List<HttpHeader>();
+        private readonly HttpHeaderCollection headers = new HttpHeaderCollection();
 
-        private List<QueryParameter> queryParameters = new List<QueryParameter>();
+        private readonly QueryParameterCollection queryParameters = new QueryParameterCollection();
+
+        public HttpRequestDetails(string url)
+        {
+            Uri = new Uri(url);
+        }
 
         public Uri Uri { get; set; }
 
-        public IList<HttpHeader> Headers { get { return headers; } }
+        public HttpHeaderCollection Headers { get { return headers; } }
 
-        public IList<QueryParameter> QueryParameters { get { return queryParameters; } }
+        public QueryParameterCollection QueryParameters { get { return queryParameters; } }
 
         public string RequestMethod { get; set; }
     }
