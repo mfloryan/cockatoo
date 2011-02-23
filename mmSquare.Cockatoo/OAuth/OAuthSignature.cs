@@ -13,9 +13,9 @@
 
         public OAuthDetails OAuthDetails { get { return oAuthDetails; } }
 
-        public void Sign(HttpRequestDetails httpRequest)
+        public HttpRequestDetails Sign(HttpRequestDetails httpRequest)
         {
-            
+            return null;
         }
     }
 }

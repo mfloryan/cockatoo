@@ -6,6 +6,7 @@
     public class HttpRequestDetails
     {
         private List<HttpHeader> headers = new List<HttpHeader>();
+
         private List<QueryParameter> queryParameters = new List<QueryParameter>();
 
         public Uri Uri { get; set; }
@@ -15,6 +16,5 @@
         public IList<QueryParameter> QueryParameters { get { return queryParameters; } }
 
         public string RequestMethod { get; set; }
-
     }
 }
