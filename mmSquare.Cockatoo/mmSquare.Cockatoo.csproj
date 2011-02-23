@@ -41,13 +41,16 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseListCollection.cs" />
     <Compile Include="Http\HttpHeader.cs" />
+    <Compile Include="Http\HttpHeaderCollection.cs" />
     <Compile Include="Http\HttpRequestDetails.cs" />
     <Compile Include="Http\HttpVerbs.cs" />
     <Compile Include="Http\QueryParameter.cs" />
+    <Compile Include="Http\QueryParameterCollection.cs" />
     <Compile Include="Http\QueryParameterComparer.cs" />
-    <Compile Include="OAuth\OAuthDetails.cs" />
-    <Compile Include="OAuth\OAuthSignature.cs" />
+    <Compile Include="OpenAuthorization\OpenAuthorizationDetails.cs" />
+    <Compile Include="OpenAuthorization\OpenAuthorizationSignatory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

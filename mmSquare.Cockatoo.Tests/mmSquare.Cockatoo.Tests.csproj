@@ -45,8 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Http\HttpHeaderTests.cs" />
+    <Compile Include="Http\HttpRequestDetailsTests.cs" />
+    <Compile Include="Http\QueryParameterCollectionTests.cs" />
     <Compile Include="Http\QueryParameterComparerTests.cs" />
-    <Compile Include="OAuth\OAuthSigningTests.cs" />
+    <Compile Include="OpenAuthorization\OAuthSigningTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

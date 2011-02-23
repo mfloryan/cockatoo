@@ -1,8 +1,9 @@
-﻿namespace mmSquare.Cockatoo.Tests.OAuth
+﻿using mmSquare.Cockatoo.OpenAuthorization;
+
+namespace mmSquare.Cockatoo.Tests.OAuth
 {
     using System.Linq;
     using Cockatoo.Http;
-    using Cockatoo.OAuth;
     using NUnit.Framework;
 
     [TestFixture]
@@ -13,7 +14,6 @@
         public void Should_Sign_Example_Request_Details_From_Specification()
         {
             string url = "http://photos.example.net/photos";
-            string parameters = "size=original, file=vacation.jpg";
             string consumerKey = "dpf43f3p2l4k3l03";
             string consumerSecret = "kd94hf93k423kf44";
             string token = "nnch734d00sl2jdk";
@@ -21,10 +21,17 @@
             string nonce = "kllo9940pd9333jh";
             string timestamp = "1191242096";
 
-            var authDetails = new OAuthDetails();
+            var authDetails = new OpenAuthorizationDetails(consumerKey, consumerSecret)
+                                  {
+                                      Token = token,
+                                      TokenSecret = tokenSecret
+                                  };
 
-            var signature = new OAuthSignature(authDetails);
-            var httpRequest = new HttpRequestDetails();
+            var httpRequest = new HttpRequestDetails(url);
+            httpRequest.QueryParameters.Add("size", "original");
+            httpRequest.QueryParameters.Add("file", "vacation.jpg");
+
+            var signature = new OpenAuthorizationSignatory(authDetails);
 
             var signedRequest = signature.Sign(httpRequest);
 
