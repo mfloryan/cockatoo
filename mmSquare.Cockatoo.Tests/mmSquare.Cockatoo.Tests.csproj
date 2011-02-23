@@ -48,7 +48,7 @@
     <Compile Include="Http\HttpRequestDetailsTests.cs" />
     <Compile Include="Http\QueryParameterCollectionTests.cs" />
     <Compile Include="Http\QueryParameterComparerTests.cs" />
-    <Compile Include="OpenAuthorization\OAuthSigningTests.cs" />
+    <Compile Include="OpenAuthorization\OpenAuthorizationSignatoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

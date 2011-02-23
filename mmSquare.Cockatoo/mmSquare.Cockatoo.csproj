@@ -49,8 +49,10 @@
     <Compile Include="Http\QueryParameter.cs" />
     <Compile Include="Http\QueryParameterCollection.cs" />
     <Compile Include="Http\QueryParameterComparer.cs" />
+    <Compile Include="OpenAuthorization\OAuth.cs" />
     <Compile Include="OpenAuthorization\OpenAuthorizationDetails.cs" />
     <Compile Include="OpenAuthorization\OpenAuthorizationSignatory.cs" />
+    <Compile Include="OpenAuthorization\SignatureMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
